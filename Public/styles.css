@@ -1,0 +1,32 @@
+:root {
+  --color-one: #8093F1;
+  --color-two: #EBECED;
+  --color-three: #F7AEF8;
+
+  --background-color: var(--color-two);
+  --color: var(--color-one);
+}
+body,html{
+  overflow:hidden
+}
+.menu {
+    background-color: var(--color-one);
+    height: 100vh;
+  }
+.app-container {
+    background-color: var(--color-two);
+    height: 100vh;
+    font-family: 'Open Sans', sans-serif;
+  }
+.nav {
+  width: 100%;
+  height: 125px;
+  background-color: var(--color-three);
+}
+
+.custom-card {
+  width: calc( 100% - 40px);
+  height: calc( 100% - 290px);
+  margin: 40px 20px;
+  background-color: #fff;
+}
