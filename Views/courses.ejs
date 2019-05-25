@@ -4,33 +4,52 @@
       <title> live university </title>
       
       <meta name = "viewport" content = "width = device-width, initial-scale = 1">      
-      <link rel = "stylesheet"
-         href = "https://fonts.googleapis.com/icon?family=Material+Icons">
-      <link rel = "stylesheet"
-         href = "https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/css/materialize.min.css">
-      <script type = "text/javascript" src = "https://code.jquery.com/jquery-2.1.1.min.js">
-      </script>           
-      <script src = "https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/js/materialize.min.js">
-      </script>
-
+      
+      <link rel = "stylesheet" href = "https://fonts.googleapis.com/icon?family=Material+Icons">
+      <link rel = "stylesheet" href = "https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/css/materialize.min.css">
       <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,600,600i,700,700i" rel="stylesheet">
-
       <link rel="stylesheet" href="styles.css" type="text/css">
+
+      <script type = "text/javascript" src = "https://code.jquery.com/jquery-2.1.1.min.js"> </script>           
+      <script src = "https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/js/materialize.min.js"> </script>
+
   </head>
   <body>
-   
     <div class="app row">
-
       <div class="menu col s12 m3 l2"> 
         oi
-
-
       </div>
 
       <div class="app-container col s12 m9 l10"> 
         <div class="nav"> aqui é o header </div>
         <div class="custom-card">
-          <div class="card-title">Titlo</div>
+          <div class="card-title-wrapper">
+            <div class="card-title">14 Práticas de Negociação</div> 
+            <div class="card-date">1 de  Agosto de 2018</div>
+          </div>
+          <div class="card-buttons">
+            <a class="custom-button"> <i class="custom-icon material-icons md-18 left">insert_chart</i> CHECKBOX</a>
+            <a class="custom-button download-btn"> <i class="custom-icon material-icons md-18 left">insert_chart</i> BAIXAR CONTEÚDO</a>
+          </div>
+          <div class="card-checkbox open">
+            <% for(var i = 1; i < 6; i++) { %>   
+              <div class="card-instruction-row">
+                <div class="checkbox-wrapper">
+                  <form action="#">
+                      <p>
+                        <input type="checkbox" class="checkbox filled-in" id={<%= i %>} checked="checked" />
+                        <label for={<%= i %>}> </label>
+                      </p>
+                  </form>
+                </div>  
+                <span>Instrução <%= i %> </span> <br>
+                <span class="instructions">Algumas observações sobre essa instrução</span>
+              </div>
+         <% } %>
+            </div>
+          </div>
+          <div class="card-table-controllers"> Butão de novo</div>
+          <div class="table">table</div>
         </div>
 
 

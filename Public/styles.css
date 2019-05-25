@@ -1,8 +1,14 @@
 :root {
-  --color-one: #8093F1;
-  --color-two: #EBECED;
-  --color-three: #F7AEF8;
+  --color-one:  #fff;
+  --color-two: #fcfcfc;
+  --color-three: #f2f2f2;
+  --color-four: #edc00e;
+  --color-five: #eaebed;
+  --color-six: #69aff4;
 
+  --buttons-secundary-color: var(--color-six);
+  --buttons-color: var(--color-five);
+  --border-color: var(--color-three);
   --background-color: var(--color-two);
   --color: var(--color-one);
 }
@@ -12,21 +18,124 @@ body,html{
 .menu {
     background-color: var(--color-one);
     height: 100vh;
+    border-radius: 5px;
+    border-color: var(--border-color);
+    border-width: 2px;
+    border-style: none solid none none;
   }
 .app-container {
-    background-color: var(--color-two);
+    background-color: var(--background-color);
     height: 100vh;
     font-family: 'Open Sans', sans-serif;
   }
 .nav {
   width: 100%;
   height: 125px;
-  background-color: var(--color-three);
+  background-color: var(--background-color);
 }
 
 .custom-card {
-  width: calc( 100% - 40px);
-  height: calc( 100% - 290px);
-  margin: 40px 20px;
-  background-color: #fff;
+  width: calc( 100% - 20px);
+  height: calc( 100% - 165px);
+  margin: 0px 10px;
+  padding: 25px;
+  background-color: var(--color-one);
+  border-radius: 10px;
+  border-color: var(--border-color);
+  border-width: 2px;
+  border-style: solid
+}
+
+.card-title-wrapper {
+  color: var(--color-four);
+  height: 80px;
+
+}
+
+.card-title {
+  font-size: 1.23em;
+  margin: 0;
+}
+
+.card-date {
+  font-size: .93em;
+  margin: 5px 2px;
+}
+
+.custom-icon {
+  font-size: 20px;
+}
+
+.custom-button {
+  display: inline-block;
+  font-size: 12px;
+  line-height: 20px;
+  height: 25px;
+  width: 130px;
+  padding: 3px;
+  background-color: var(--buttons-color);
+  cursor: pointer;
+  border-radius: 5%;
+  color: var(--color-four); 
+  margin-right: 10px;
+}
+
+.custom-button:hover {
+  background-color: Magenta;
+}
+
+.download-btn {
+  color:var(--buttons-secundary-color);
+  width: 160px;
+}
+
+.card-checkbox.open {
+   width: 100%;;
+   height: 170px;
+   margin-top: 15px;
+   padding-top: 5px;
+   background-color: var(--border-color);
+   overflow-y: scroll;
+   border-color: var(--color-four);
+   border-width: 5px;
+   border-style: none none none solid;
+
+}
+
+.checkbox[type="checkbox"].filled-in:checked + label:after {
+  border: 2px solid #aa6e15;
+  background-color: var(--color-four);
+  width: 15px;
+  height: 15px;
+}
+
+[type="checkbox"].filled-in:not(:checked)+label:after {
+  height: 15px;
+  width: 15px;
+  background-color: transparent;
+  border: 2px solid #aa6e15;
+  top: 0px;
+  z-index: 0;
+}
+
+[type="checkbox"].filled-in:checked+label:before {
+display: none;
+}
+
+
+.checkbox-wrapper {
+  float: left;
+  width: 35px;
+}
+
+.card-instruction-row {
+  padding: 0px 15px;
+  width: 100%;
+  height: 45px;
+  margin-bottom: 10px;
+  font-size: 12px;
+}
+
+.instructions {
+  color: grey;
 }
