@@ -47,31 +47,34 @@
         <div class="custom-card">
           <div class="card-title-wrapper">
             <div class="card-title">Cursos</div> 
-            
+        </div>
+        <div class='search-bar-wrapper'>
+            <input type="search" id="site-search" class="search-bar"  aria-label="Search through site content" placeholder="  Pesquisar">
+            <i class="custom-icon material-icons search-icon"> search</i>
+        </div>
    
           <div class="table-wrapper courses">
             <table class="table">
               <%for(var i = 1; i < 8; i++) { %>
                 <tr>
-                <td>
-                    <div class="profile-pic"> </div>
+                <td class="td-circle">
+                    <div class="table-course-date">
+                    <span class="table-course-day"> 03</span> <br/>
+                    <span class="table-course-month">AGO</span> <br/>
+                    </div>
                 </td>
                   <td>
-                    <span class="table-name">Paula Mayumi</span><br/>
-                    <span class="table-email">paulatejano@lamemo.com</span>
+                    <span class="table-name">14 práticas de compras</span><br/>
+                    <span class="table-cell-subtitle">Legendas sobre o curso</span>
                   </td>
                   <td>
-                    <span class="table-cell-key">Cargo:</span><br/>
-                    <span class="table-cell-value">Assistente</span>
-                  </td>
-                  <td>
-                    <span class="table-cell-key">Empresa:</span><br/>
-                    <span class="table-cell-value">Live University</span>
+                    <span class="table-cell-subtitle">Colaboradores:</span>
+                    <span class="table-cell-number-primary">15</span>
+                    <span class="table-cell-subtitle">/ 30 </span>
                   </td>
                   <td>
                     <div class="table-buttons">
                       <a class="custom-button table-btn blue-btn" id="open-btn"> ABRIR </a>
-                      <a class="custom-button table-btn"> REMOVER</a>
                     </div>
                   </td>
                 </tr>

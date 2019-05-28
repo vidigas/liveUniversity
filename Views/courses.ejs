@@ -24,7 +24,7 @@
         </div>
           <div class="menu-buttons-wrapper">
             <a class="menu-button" id="menu-button" href="/"> <i class="custom-icon material-icons small  menu-icon">insert_chart</i> Colaboradores</a>
-            <a class="menu-button course" id="menu-button courses" href="" onclick="checkboxClick()"> <i class="custom-icon material-icons small menu-icon icon-course">insert_chart</i> Cursos</a>
+            <a class="menu-button course" id="menu-button courses" href="/cursos" onclick="checkboxClick()"> <i class="custom-icon material-icons small menu-icon icon-course">insert_chart</i> Cursos</a>
 
           </div>
       </div>
@@ -70,7 +70,13 @@
          <% } %>
             </div>
           <div class="card-table-controllers">
+            <div class="table-title">Colaboradores</div>
 
+            <a class="custom-button table-btn header-btn">  + ABRIR</a>
+            <div class='search-bar-wrapper'>
+              <input type="search" id="site-search" class="search-bar"  aria-label="Search through site content" placeholder="  Pesquisar">
+              <i class="custom-icon material-icons search-icon"> search</i>
+            </div>
           </div>
           <hr>
           <div class="table-wrapper">
@@ -79,7 +85,7 @@
                 <tr>
                   <td>
                     <span class="table-name">Paula Mayumi</span><br/>
-                    <span class="table-email">paulatejano@lamemo.com</span>
+                    <span class="table-cell-subtitle">paulatejano@lamemo.com</span>
                   </td>
                   <td>
                     <span class="table-cell-key">Cargo:</span><br/>
