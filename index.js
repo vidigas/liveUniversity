@@ -16,7 +16,7 @@ app.get('/hello', (req, res) => res.status(200).send('Hello World'));
 
 app.get('/', getAllCourses);
 
-app.get('/curso', getCourseDetails);
+app.get('/cursos', getCourseDetails);
 
 app.listen(PORT, err => {
     console.log(`app running on port ${PORT}`)

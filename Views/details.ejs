@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+  <head>
+      <title> live university </title>
+      
+      <meta name = "viewport" content = "width = device-width, initial-scale = 1">      
+      
+      <link rel = "stylesheet" href = "https://fonts.googleapis.com/icon?family=Material+Icons">
+      <link rel = "stylesheet" href = "https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/css/materialize.min.css">
+      <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,600,600i,700,700i" rel="stylesheet">
+      <link rel="stylesheet" href="styles.css" type="text/css">
+
+      <script type = "text/javascript" src = "https://code.jquery.com/jquery-2.1.1.min.js"> </script>           
+      <script src = "https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/js/materialize.min.js"> </script>
+
+  </head>
+  <body>
+    <div class="app row">
+      <div class="menu col"> 
+        <div class="degrade">
+          <div class="logo-wrapper"> 
+            <img src="logo.png" className="app-logo" alt="live university" height="141" width="200">
+          </div>
+        </div>
+          <div class="menu-buttons-wrapper">
+            <a class="menu-button" id="menu-button" href="/"> <i class="custom-icon material-icons small  menu-icon">insert_chart</i> Colaboradores</a>
+            <a class="menu-button course" id="menu-button courses" href="/cursos" onclick="checkboxClick()"> <i class="custom-icon material-icons small menu-icon icon-course">insert_chart</i> Cursos</a>
+
+          </div>
+      </div>
+
+      <div class="app-container col"> 
+        <div class="nav">
+          <div class="profile-wrapper">
+            <div class="profile-item">
+              <div class="profile-name">Ricardo Barata</div>
+              <div class="profile-title">Live University</div>
+            </div>
+            <div class="profile-item">
+              <div class="profile-pic"> </div>
+            </div>
+            <div class="profile-item">
+              <div class="profile-menu"> <i class="custom-icon material-icons small"> keyboard_arrow_down</i> </div>
+            </div>              
+          </div>
+        </div>
+        <div class="custom-card">
+          <div class="card-title-wrapper">
+            <div class="card-title">Cursos</div> 
+            
+   
+          <div class="table-wrapper courses">
+            <table class="table">
+              <%for(var i = 1; i < 8; i++) { %>
+                <tr>
+                <td>
+                    <div class="profile-pic"> </div>
+                </td>
+                  <td>
+                    <span class="table-name">Paula Mayumi</span><br/>
+                    <span class="table-email">paulatejano@lamemo.com</span>
+                  </td>
+                  <td>
+                    <span class="table-cell-key">Cargo:</span><br/>
+                    <span class="table-cell-value">Assistente</span>
+                  </td>
+                  <td>
+                    <span class="table-cell-key">Empresa:</span><br/>
+                    <span class="table-cell-value">Live University</span>
+                  </td>
+                  <td>
+                    <div class="table-buttons">
+                      <a class="custom-button table-btn blue-btn" id="open-btn"> ABRIR </a>
+                      <a class="custom-button table-btn"> REMOVER</a>
+                    </div>
+                  </td>
+                </tr>
+              <%}%>
+            </table>
+          </div>
+          
+        </div>
+
+
+      </div>
+
+    </div>
+
+<script type="text/javascript">
+
+  function checkboxClick () {
+    // document.querySelector('#checklist').addEventListener('click', (e) => {
+      let button = document.querySelector('#card-checkbox')
+      let card = document.querySelector('.custom-card')
+        if(button.className.split(' ')[1]){
+          button.className = 'card-checkbox';
+          card.className = "custom-card";
+        } else {
+          button.className = 'card-checkbox open';
+          card.className = 'custom-card card-open';
+        }
+          
+        return
+    // });
+  }
+ 
+
+
+
+</script>
+  </body>
+</html>
