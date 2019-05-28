@@ -1,10 +1,10 @@
 :root {
   --color-one:  #fff;
-  --color-two: #fcfcfc;
-  --color-three: #f2f2f2;
-  --color-four: #edc00e;
-  --color-five: #eaebed;
-  --color-six: #69aff4;
+  --color-two: rgb(252, 252, 252);
+  --color-three: #f0f0f0;
+  --color-four: #d69718;
+  --color-five: #f5f5f5;
+  --color-six: #029ba0;
 
   --buttons-secundary-color: var(--color-six);
   --buttons-color: var(--color-five);
@@ -33,13 +33,14 @@ html, body {
     width: 248px;
     overflow: hidden;
     padding: 0px !important;
+    float:left;
   }
 
   .degrade {
     width: 248px;
     height: 200px;
     background-color: #edc00e;
-    background-image: linear-gradient( yellow, #edc00e);
+    background-image: linear-gradient( #fdd371, #c38914);
 
   }
 
@@ -63,7 +64,36 @@ html, body {
 .app-container {
     background-color: var(--background-color);
     height: 100%;
-    width: calc(100% - 248px)
+    width: calc(100% - 248px);
+    float: left;
+  }
+
+  .app-logo {
+    height: 60;
+    width: 200;
+  }
+
+
+  @media  screen and (max-width: 800px) {
+    .menu {
+      width: 100%;
+      height: 300px;
+    }
+    .degrade {
+      width: 100%;
+      height: 45px;
+    }
+    .app-container {
+      width: 100%;
+    }
+
+    .logo-wrapper {
+      clip-path: none;
+      height: 80px;
+      width: 100%;
+      position: relative;
+      top: 45px;
+    }
   }
 .nav {
   width: 100%;
@@ -89,7 +119,7 @@ html, body {
 }
 
 .profile-pic {
-  background-color: gray;
+  background-color: #f7f7f7;
   width: 50px;
   height: 50px;
   border-radius: 50%;
@@ -97,7 +127,7 @@ html, body {
 }
 
 .profile-name {
-  color: blue;
+  color: var(--color-six);
   font-size: 20px;
   text-align: right;
 }
@@ -171,7 +201,7 @@ html, body {
 }
 
 .blue-btn {
-  color: blue;
+  color: var(--color-six);
   background-color: var(--buttons-color);
 
 }
@@ -189,7 +219,7 @@ html, body {
   width: 100%;;
   margin-top: 15px;
   padding-top: 5px;
-  background-color: var(--border-color);
+  background-color: #fafafa;
   overflow-y: scroll;
   border-color: var(--color-four);
   border-width: 5px;
@@ -264,7 +294,7 @@ display: none;
 }
 
 .table-title {
-  color: blue;
+  color: var(--color-six);
   display: inline-block;
   position: relative;
   top: 5px;
@@ -316,8 +346,8 @@ td {
 }
 
 .table-course-date {
-  background-color: var(--buttons-color);
-  color: blue;
+  background-color: #f7f7f7;
+  color: var(--color-six);
   width: 55px;
   height: 55px;
   border-radius: 50%;
@@ -374,13 +404,13 @@ td {
 }
 
 .icon-course {
-  color: blue;
+  color: var(--color-six);
 
 }
 
 .course:hover {
   background-color: var(--buttons-color);
-  border-color: blue;
+  border-color: var(--color-six);
   border-width: 5px;
   border-style: none none none solid;
   font-weight: bold;

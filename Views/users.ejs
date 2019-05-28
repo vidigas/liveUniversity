@@ -15,11 +15,11 @@
 
   </head>
   <body>
-    <div class="app row">
-      <div class="menu col"> 
+    <div class="app">
+      <div class="menu "> 
         <div class="degrade">
           <div class="logo-wrapper"> 
-            <img src="logo.png" className="app-logo" alt="live university" height="141" width="200">
+            <img src="logo.png" class="app-logo" alt="live university" >
           </div>
         </div>
           <div class="menu-buttons-wrapper">
@@ -29,7 +29,7 @@
           </div>
       </div>
 
-      <div class="app-container col"> 
+      <div class="app-container "> 
         <div class="nav">
           <div class="profile-wrapper">
             <div class="profile-item">
@@ -81,19 +81,19 @@
           <hr>
           <div class="table-wrapper">
             <table class="table">
-              <%for(var i = 1; i < 8; i++) { %>
+              <%for(var i = 0; i < users.length; i++) { %>
                 <tr>
                   <td>
-                    <span class="table-name">Paula Mayumi</span><br/>
-                    <span class="table-cell-subtitle">paulatejano@lamemo.com</span>
+                    <span class="table-name"><%= users[i].name %></span><br/>
+                    <span class="table-cell-subtitle"><%= users[i].email %></span>
                   </td>
                   <td>
                     <span class="table-cell-key">Cargo:</span><br/>
-                    <span class="table-cell-value">Assistente</span>
+                    <span class="table-cell-value"><%= users[i].position %> </span>
                   </td>
                   <td>
                     <span class="table-cell-key">Empresa:</span><br/>
-                    <span class="table-cell-value">Live University</span>
+                    <span class="table-cell-value"><%= users[i].company %></span>
                   </td>
                   <td>
                     <div class="table-buttons">

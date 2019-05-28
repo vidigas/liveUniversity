@@ -15,8 +15,8 @@
 
   </head>
   <body>
-    <div class="app row">
-      <div class="menu col"> 
+    <div class="app ">
+      <div class="menu "> 
         <div class="degrade">
           <div class="logo-wrapper"> 
             <img src="logo.png" className="app-logo" alt="live university" height="141" width="200">
@@ -28,8 +28,7 @@
 
           </div>
       </div>
-
-      <div class="app-container col"> 
+      <div class="app-container "> 
         <div class="nav">
           <div class="profile-wrapper">
             <div class="profile-item">
@@ -55,21 +54,21 @@
    
           <div class="table-wrapper courses">
             <table class="table">
-              <%for(var i = 1; i < 8; i++) { %>
+              <%for(var event of events) { %>
                 <tr>
                 <td class="td-circle">
                     <div class="table-course-date">
-                    <span class="table-course-day"> 03</span> <br/>
-                    <span class="table-course-month">AGO</span> <br/>
+                    <span class="table-course-day"> <%= event.dia %></span> <br/>
+                    <span class="table-course-month"><%= event.mes %></span> <br/>
                     </div>
                 </td>
                   <td>
-                    <span class="table-name">14 práticas de compras</span><br/>
-                    <span class="table-cell-subtitle">Legendas sobre o curso</span>
+                    <span class="table-name"><%= event.nome %></span><br/>
+                    <span class="table-cell-subtitle"><%= event.desc %></span>
                   </td>
                   <td>
                     <span class="table-cell-subtitle">Colaboradores:</span>
-                    <span class="table-cell-number-primary">15</span>
+                    <span class="table-cell-number-primary"><%= event.inscritos %></span>
                     <span class="table-cell-subtitle">/ 30 </span>
                   </td>
                   <td>
