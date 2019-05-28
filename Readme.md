@@ -1,4 +1,4 @@
-# ida-auth
+# liveUniversity - test Front End
 
 Esse projeto foi desenvolvido como teste para a liveUniversity.
 
