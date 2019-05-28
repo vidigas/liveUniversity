@@ -21,14 +21,27 @@
       </div>
 
       <div class="app-container col s12 m9 l10"> 
-        <div class="nav"> aqui é o header </div>
+        <div class="nav">
+          <div class="profile-wrapper">
+            <div class="profile-item">
+              <div class="profile-name">Ricardo Barata</div>
+              <div class="profile-title">Live University</div>
+            </div>
+            <div class="profile-item">
+              <div class="profile-pic"> </div>
+            </div>
+            <div class="profile-item">
+              <div class="profile-menu"> <i class="custom-icon material-icons small"> keyboard_arrow_down</i> </div>
+            </div>              
+          </div>
+        </div>
         <div class="custom-card">
           <div class="card-title-wrapper">
             <div class="card-title">14 Práticas de Negociação</div> 
             <div class="card-date">1 de  Agosto de 2018</div>
           </div>
           <div class="card-buttons">
-            <a class="custom-button" id="checklist"> <i class="custom-icon material-icons md-18 left">insert_chart</i> CHECKBOX</a>
+            <a class="custom-button" id="checklist" onclick="checkboxClick()"> <i class="custom-icon material-icons md-18 left">insert_chart</i> CHECKBOX</a>
             <a class="custom-button download-btn"> <i class="custom-icon material-icons md-18 left">insert_chart</i> BAIXAR CONTEÚDO</a>
           </div>
           <div id="card-checkbox" class="card-checkbox">
@@ -48,32 +61,61 @@
          <% } %>
             </div>
           <div class="card-table-controllers">
-            <form>
-              <div class="input-field">
-                <input id="search" type="search" required />
-                <label class="label-icon" for="search"><i class="material-icons">search</i></label>
-              <i class="material-icons">close</i>
-              </div>
-            </form>
+
           </div>
-          <div class="table">table</div>
+          <hr>
+          <div class="table-wrapper">
+            <table class="table">
+              <%for(var i = 1; i < 8; i++) { %>
+                <tr>
+                  <td>
+                    <span class="table-name">Paula Mayumi</span><br/>
+                    <span class="table-email">paulatejano@lamemo.com</span>
+                  </td>
+                  <td>
+                    <span class="table-cell-key">Cargo:</span><br/>
+                    <span class="table-cell-value">Assistente</span>
+                  </td>
+                  <td>
+                    <span class="table-cell-key">Empresa:</span><br/>
+                    <span class="table-cell-value">Live University</span>
+                  </td>
+                  <td>
+                    <div class="table-buttons">
+                      <a class="custom-button table-btn blue-btn" id="open-btn"> ABRIR </a>
+                      <a class="custom-button table-btn"> REMOVER</a>
+                    </div>
+                  </td>
+                </tr>
+              <%}%>
+            </table>
+          </div>
+          
         </div>
 
 
       </div>
 
     </div>
+
 <script type="text/javascript">
 
-
-  document.querySelector('#checklist').addEventListener('click', (e) => {
-    let button = document.querySelector('#card-checkbox')
-      if(button.className.split(' ')[1]){
-        button.className = 'card-checkbox';
-      } else button.className = 'card-checkbox open';
-        
-      return
-  });
+  function checkboxClick () {
+    // document.querySelector('#checklist').addEventListener('click', (e) => {
+      let button = document.querySelector('#card-checkbox')
+      let card = document.querySelector('.custom-card')
+        if(button.className.split(' ')[1]){
+          button.className = 'card-checkbox';
+          card.className = "custom-card";
+        } else {
+          button.className = 'card-checkbox open';
+          card.className = 'custom-card card-open';
+        }
+          
+        return
+    // });
+  }
+ 
 
 
 
